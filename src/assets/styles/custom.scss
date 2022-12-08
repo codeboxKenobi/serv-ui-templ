@@ -1,0 +1,26 @@
+
+  @mixin flexRow( $jc, $ai ) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+  }
+
+  @mixin flexCol( $jc, $ai ) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+  }
+  
+  @mixin font( $size ) {
+    font-size: $size;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  $main-color: #2c3e50;
+  $main-white: #e6e9ec;
+  $main-red: #4b0606;
+  $main-border: 1px solid #2c3e50;
+  $main-border-white: 1px solid $main-white;

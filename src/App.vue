@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <auth-cmp v-if="!$store.getters.GET_AUTH_STATE" />
+    <user-cmp v-if="$store.getters.GET_AUTH_STATE" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import AuthCmp from './components/pages/AuthCmp.vue'
+import UserCmp from './components/pages/UserCmp.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AuthCmp,
+    UserCmp
+  },
+
+  setup() {
+
+    return {
+
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import '~/src/assets/styles/custom.scss';
+body {
+  margin: 0;
 }
+
 </style>
