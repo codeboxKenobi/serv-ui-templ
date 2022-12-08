@@ -1,7 +1,7 @@
 <template>
     <div class="user-cmp">
         <header class="user-cmp-header">
-            
+            <nav-cmp />
         </header>
 
         <main class="user-cmp-main">
@@ -11,8 +11,11 @@
 </template>
 
 <script>
+import NavCmp from '../ui/controls/NavCmp.vue';
     export default {
-        
+        components: {
+            NavCmp
+        }
     }
 </script>
 
