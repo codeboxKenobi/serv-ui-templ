@@ -1,9 +1,11 @@
 <template>
     <div class="nav-cmp">
         <tab-cmp v-for="( tab, tabIndex ) in tabs" 
-        :class="active === tabIndex ? 'active-tab' : '' "
+            :class="active === tabIndex ? 'active-tab' : '' "
             :key="tabIndex" 
             :name="tab" 
+            :active="active"
+            :id="tabIndex"
                 @click="( active = tabIndex )"
                 @click-handler="clickHandler( tab )" />
     </div>
@@ -19,7 +21,7 @@ import TabCmp from '../TabCmp.vue';
         },
 
         setup() {
-            const active = ref( false )
+            const active = ref( 1 )
             const tabs = {
                 '1': 'Сервис',
                 '2': 'Продажи',

@@ -17,7 +17,7 @@
 <style lang="scss" scoped>
 @import '~/src/assets/styles/custom.scss';
 
-.tab-cmp {
+.tab-cmp {  
     height: 30px;
     padding: 5px;
     margin: 10px;
